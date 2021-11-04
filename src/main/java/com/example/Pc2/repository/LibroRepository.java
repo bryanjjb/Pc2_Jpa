@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.eje.repository;
+package com.example.Pc2.repository;
 
-import com.example.eje.entity.Editoriales;
+import com.example.Pc2.entity.Libro;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
-@Repository
-public interface EditorialesRepository extends JpaRepository<Editoriales, Integer>{
+
+public interface LibroRepository extends JpaRepository<Libro, Integer>{
     
 }

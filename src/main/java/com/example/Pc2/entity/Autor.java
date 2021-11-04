@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.example.eje.entity;
+
+package com.example.Pc2.entity;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -20,23 +16,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "autor")
-public class Autor implements Serializable {
-
+public class Autor implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idautor")
     private int id;
-    @Column(name = "nombre")
-    private String nombre;
-    private String apellido;
-
+    @Column(name = "nom_au")
+    private String nomau;
+    @Column(name = "ape_au")
+    private String apeau;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "idlibro")
-    private Set<Libros> libros;
+    private Set<Libro> libros;
 }

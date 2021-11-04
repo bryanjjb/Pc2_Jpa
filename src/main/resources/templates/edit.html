@@ -15,12 +15,21 @@
                 <div class="card-body">
                     <form action="/update">
                         <div class="mb-3">
-                            <input type="text" class="form-control m-25" placeholder="titulo" name="titulo" th:value="${post.titulo}" >
+                            <select name="idautor" id="aut" class="form-control">
+                                <option value="0">Seleccionar Autor</option>                                
+                                <option th:each="aut: ${auts}" th:value="${aut.id}" th:text="${aut.apeau}" th:selected="false"/>                              
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="descripcion" placeholder="Descripción" th:value="${post.descripcion}" >        
+                            <select name="ideditorial" id="ed" class="form-control">
+                                <option value="0">Seleccionar Editorial</option>                                
+                                <option th:each="ed: ${eds}" th:value="${ed.id}" th:text="${ed.nomedi}" th:selected="false"/>                              
+                            </select>
                         </div>
-                        <input type="hidden" name="id" th:value="${post.id}" />
+                        <div class="mb-3">
+                            <input type="text" class="form-control m-25" name="nombre" placeholder="Nombres" th:value="${lib.nombre}" >
+                        </div>
+                        <input type="hidden" name="id" th:value="${lib.id}" />
                         <input type="submit" class="btn btn-primary" value="Actualizar">
                     </form>
                 </div>

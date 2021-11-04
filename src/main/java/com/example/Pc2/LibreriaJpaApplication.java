@@ -1,13 +1,13 @@
-package com.example.eje;
+package com.example.Pc2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EjeApplication {
+public class LibreriaJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EjeApplication.class, args);
+		SpringApplication.run(LibreriaJpaApplication.class, args);
 	}
 
 }

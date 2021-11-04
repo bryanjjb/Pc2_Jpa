@@ -1,4 +1,4 @@
-package com.example.eje;
+package com.example.Pc2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
