@@ -26,7 +26,7 @@ public class Editorial implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ideditorial")
     private int id;
-    @Column(name = "nom_edi")
+    @Column(name = "nombre")
     private String nomedi;
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "idlibro")
